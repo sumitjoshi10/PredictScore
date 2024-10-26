@@ -1,8 +1,8 @@
 import os
 from pathlib import Path
-import logging
+from src.logger import logging
 
-logging.basicConfig(level=logging.INFO)
+logging.info("Files and Folder Creation Started")
 
 list_of_files = [
     "src/__init__.py",
@@ -38,3 +38,6 @@ for file_path in list_of_files:
             
     else:
         logging.info(f"{file_name} already exist")
+
+
+logging.info(" Files and Folder Created")
