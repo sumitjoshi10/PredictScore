@@ -23,7 +23,8 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         try:
             # Reading from the MySQL Database
-            df = read_sql_data()
+            # df = read_sql_data() # Not reading the database always
+            df =pd.read_csv("notebook/data/raw.csv")
             logging.info("Reading  Completed for the MySQL Database")
             
             # To Create a artifacts folder
@@ -40,6 +41,11 @@ class DataIngestion:
             test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
             
             logging.info("Data Ingestion is completed")
+            
+            return(
+                self.ingestion_config.train_data_path,
+                self.ingestion_config.test_data_path
+            )
             
         except Exception as e:
             logging.info("Error occured during data ingestion")
