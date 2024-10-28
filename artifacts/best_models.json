@@ -1,0 +1,70 @@
+{
+    "Random_Forest": {
+        "best_score": 0.8366456403121818,
+        "best_params": {
+            "n_estimators": 100
+        },
+        "test_r2_score": 0.9765223420746649,
+        "avg_best_score": 0.892596321017175
+    },
+    "Decision_Tree": {
+        "best_score": 0.7192164843509504,
+        "best_params": {
+            "criterion": "absolute_error"
+        },
+        "test_r2_score": 0.9996534669718089,
+        "avg_best_score": 0.8313912773992937
+    },
+    "Gradient_Boosting": {
+        "best_score": 0.8538315467993242,
+        "best_params": {
+            "learning_rate": 0.01,
+            "n_estimators": 500,
+            "subsample": 0.4
+        },
+        "test_r2_score": 0.8891160080662124,
+        "avg_best_score": 0.8679453313060794
+    },
+    "Linear_Regression": {
+        "best_score": 0.8685218668886027,
+        "best_params": {},
+        "test_r2_score": 0.8739084564808333,
+        "avg_best_score": 0.8706765027254949
+    },
+    "XG_Boosting": {
+        "best_score": 0.8327077318726317,
+        "best_params": {
+            "learning_rate": 0.01,
+            "n_estimators": 500
+        },
+        "test_r2_score": 0.945481165781988,
+        "avg_best_score": 0.8778171054363743
+    },
+    "KNN": {
+        "best_score": 0.5531893870825595,
+        "best_params": {
+            "n_neighbors": 13
+        },
+        "test_r2_score": 0.6249501168627869,
+        "avg_best_score": 0.5818936789946505
+    },
+    "Cat_Boost": {
+        "best_score": 0.8589508952883648,
+        "best_params": {
+            "depth": 4,
+            "iterations": 1000,
+            "learning_rate": 0.01
+        },
+        "test_r2_score": 0.8887312914111561,
+        "avg_best_score": 0.8708630537374813
+    },
+    "AdaBoost": {
+        "best_score": 0.8288846917986523,
+        "best_params": {
+            "learning_rate": 1.0,
+            "n_estimators": 200
+        },
+        "test_r2_score": 0.8515671799838367,
+        "avg_best_score": 0.8379576870727261
+    }
+}

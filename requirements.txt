@@ -7,5 +7,6 @@ mysql-connector-python
 scikit-learn
 catboost
 xgboost
+dill
 
 # -e .
