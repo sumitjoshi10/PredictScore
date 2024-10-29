@@ -19,7 +19,6 @@ from sklearn.metrics import r2_score
 
 from src.utils import save_object,evauluate_model,save_json
 
-import ast
 
 @dataclass
 class ModelTrainerConfig:
@@ -105,8 +104,7 @@ class ModelTrainer:
                     "params":{
                         "n_estimators": [50, 100, 200, 500],
                         "learning_rate": [0.01, 0.05, 0.1, 0.5, 1.0],
-                        # "loss": ["linear", "square", "exponential"],
-                    
+                        # "loss": ["linear", "square", "exponential"], 
                     }
                 }
             }
@@ -134,15 +132,16 @@ class ModelTrainer:
             logging.info("Best model found for both training and test data set")
             logging.info(f"{best_model} Model has been selected for model Training")
             
-               
+            best_model.fit(X_train,y_train)
+            prediction = best_model.predict(X_test)
+            r2 = r2_score(y_test,prediction)
+            
             save_object(
                 file_path=self.model_trainer_config.trained_model_file_path,
                 obj=best_model
             )
             
-            best_model.fit(X_train,y_train)
-            prediction = best_model.predict(X_test)
-            r2 = r2_score(y_test,prediction)
+            
             
             logging.info(f"[{best_model}] Model with parameter [{best_model_details["best_params"]}] has been selected for model Training. It got [{r2}] score.")
             

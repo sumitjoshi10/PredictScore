@@ -1,29 +1,29 @@
 {
     "Random_Forest": {
-        "best_score": 0.8366456403121818,
+        "best_score": 0.8360535528330406,
         "best_params": {
-            "n_estimators": 100
+            "n_estimators": 500
         },
-        "test_r2_score": 0.9765223420746649,
-        "avg_best_score": 0.892596321017175
+        "test_r2_score": 0.9771339357347827,
+        "avg_best_score": 0.8924857059937374
     },
     "Decision_Tree": {
-        "best_score": 0.7192164843509504,
+        "best_score": 0.7012041252391136,
         "best_params": {
-            "criterion": "absolute_error"
+            "criterion": "squared_error"
         },
         "test_r2_score": 0.9996534669718089,
-        "avg_best_score": 0.8313912773992937
+        "avg_best_score": 0.8205838619321917
     },
     "Gradient_Boosting": {
-        "best_score": 0.8538315467993242,
+        "best_score": 0.8546204081613562,
         "best_params": {
             "learning_rate": 0.01,
-            "n_estimators": 500,
+            "n_estimators": 1000,
             "subsample": 0.4
         },
-        "test_r2_score": 0.8891160080662124,
-        "avg_best_score": 0.8679453313060794
+        "test_r2_score": 0.9068152894819402,
+        "avg_best_score": 0.8754983606895899
     },
     "Linear_Regression": {
         "best_score": 0.8685218668886027,
@@ -59,12 +59,12 @@
         "avg_best_score": 0.8708630537374813
     },
     "AdaBoost": {
-        "best_score": 0.8288846917986523,
+        "best_score": 0.8309648022765573,
         "best_params": {
             "learning_rate": 1.0,
             "n_estimators": 200
         },
-        "test_r2_score": 0.8515671799838367,
-        "avg_best_score": 0.8379576870727261
+        "test_r2_score": 0.8539441173714359,
+        "avg_best_score": 0.8401565283145087
     }
 }
